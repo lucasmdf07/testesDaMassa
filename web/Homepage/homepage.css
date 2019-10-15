@@ -1,0 +1,26 @@
+.Center {
+    text-align: center;
+}
+
+body {
+    background-color: #7BE0AD;
+}
+
+.supers {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#spidey {
+    float: left;
+}
+
+#ff {
+    float: right;
+}
+
+.superImages {
+    height: 500px;
+    width: 350px;
+}
