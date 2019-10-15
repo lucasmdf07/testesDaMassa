@@ -1,0 +1,306 @@
+html {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    width: 1100px;
+    background-color: #efefef;
+    margin: auto;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 12px;
+    font-style: italic;
+}
+
+h6 {
+    font-size: 8px;
+    font-style: italic;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoarea {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo {
+    width: calc(50%);
+}
+
+.logo img {
+    width: 100px;
+}
+
+.logoarea .right {
+    display: flex;
+    flex-direction: column;
+}
+
+.account img {
+    width: 30px;
+    padding-right: 7px;
+}
+
+.hamburger {
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+nav ul {
+    display: flex;
+}
+
+.navigation {
+    display: inline-flex;
+    color: #1d1d1d;
+    margin: 3px 0 0 0;
+    padding: 0 5px 0 5px;
+    line-height: 2em;
+    text-align: center;
+}
+
+.navigation li {
+    /* width: 100vw; */
+    list-style: none;
+    font-size: 1em;
+    padding: 0 10px;
+}
+
+.navigation li:hover,
+.navigation li a:hover {
+    background-color: #808080;
+    color: #000;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+main h1 {
+    width: 100%;
+}
+
+.doctorshome {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.doclist {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: calc(25%);
+    padding: 15px;
+}
+
+.docmgt,
+.docmgt .doclist {
+    width: 100vw;
+    display: flex;
+    order: 2;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.docmgt .doclist,
+.docmgt,
+.docName,
+.docCityState,
+.modify,
+.delete {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.docName {
+    width: calc(20%);
+}
+
+.docCityState {
+    width: calc(25%);
+}
+
+.modify,
+.delete {
+    width: calc(5%);
+}
+
+footer {
+    padding: 10px;
+}
+
+input:invalid {
+    background-color: #ffdddd;
+}
+
+form:invalid {
+    border: 5px solid #ffdddd;
+}
+
+input:valid {
+    background-color: #ddffdd;
+}
+
+form:valid {
+    border: 5px solid #ddffdd;
+}
+
+input:required {
+    border-color: #800000;
+    border-width: 3px;
+}
+
+input:required:invalid {
+    border-color: #C00000;
+}
+
+
+/* ******************************************
+*
+*   
+*       Field Entry formatting
+*
+*
+******************************************** */
+
+#editDoc {
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset {
+    width: 40em;
+    margin: 10px 10px 30px 10px;
+    border: 0 none;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input,
+textarea,
+select {
+    order: 2;
+    flex-basis: 15em;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin: 3px;
+    align-items: flex-end;
+}
+
+label {
+    order: 1;
+    text-align: right;
+    padding-right: 0.5em;
+    white-space: nowrap;
+    cursor: pointer;
+    width: calc(25%);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    order: 1;
+    flex: none;
+    width: auto;
+    margin-left: 1em;
+}
+
+input[type="checkbox"]~label,
+input[type="radio"]~label {
+    width: auto;
+    text-align: left;
+    padding-left: 0.4em;
+}
+
+
+/* label state styles */
+
+input:focus~label,
+textarea:focus~label,
+select:focus~label {
+    color: #933;
+}
+
+input:checked~label {
+    font-weight: bold;
+}
+
+#addDoc {
+    width: calc(20%);
+    font-weight: 700;
+    order: 1;
+    display: flex;
+    flex-basis: 1em;
+    align-items: flex-start;
+    background-color: #55eeff;
+    min-height: 2.5em;
+}
+
+#addDoc[type='button'] {
+    margin: 20px 0;
+}
+
+input[type='submit'] {
+    background-color: #06147a;
+    color: #fff;
+    font-weight: 700;
+    font-kerning: 1.2;
+    max-height: 3em;
+    width: calc(25%);
+    align-self: center;
+}

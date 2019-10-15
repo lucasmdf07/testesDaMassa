@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+#boxes,
+#stboxes {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+#plain,
+#stretch {
+    display: flex;
+    flex-direction: column;
+}
+
+#button1,
+#stbutton1,
+#button2,
+#stbutton2,
+#button3,
+#stbutton3 {
+    font-size: 20px;
+    font-weight: 400;
+    width: 40vh;
+    height: 20vh;
+    margin: calc(10%);
+    padding-top: calc(30vh/2);
+}
+
+#button1,
+#stbutton1 {
+    background-color: aqua;
+}
+
+#button2,
+#stbutton2 {
+    background-color: #c3c3c3;
+}
+
+#button3,
+#stbutton3 {
+    background-color: darkorange;
+}
+
+#button1:hover,
+#button2:hover,
+#button3:hover,
+#stbutton1:hover,
+#stbutton2:hover,
+#stbutton3:hover {
+    font-weight: bold;
+}
+
+#fade {
+    padding-top: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
