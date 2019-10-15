@@ -1,0 +1,28 @@
+CREATE TABLE site (
+ID integer NOT NULL PRIMARY KEY,
+name varchar(80) NOT NULL,
+description varchar(600),
+location varchar(80),
+length real
+);
+
+CREATE TABLE picture (
+url varchar(200) NOT NULL PRIMARY KEY,
+name varchar(80) NOT NULL,
+description varchar(600),
+date_taken date
+);
+
+CREATE TABLE area (
+county varchar(80),
+state varchar(80),
+land_covered integer,
+primary key (county, state)
+);
+
+CREATE TABLE rating (
+id integer NOT NULL PRIMARY KEY,
+reviewer_name varchar(80),
+rating integer,
+description varchar(200)
+);
