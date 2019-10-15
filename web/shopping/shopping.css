@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+
+/*basics*/
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    font-size: 1.2em;
+    padding: 0px;
+    margin: 0px;
+}
+
+h1,h2{
+    font-family: 'Lora';
+    margin: 0;
+}
+
+
+
+/*Header*/
+header{
+    background-color: #0B3954;
+    color: #BFD7EA;
+    width: 100%;
+    padding: 5% 0%;
+}
+header a{
+    color: #BFD7EA;
+    text-decoration: none;
+
+}
+h1{
+    padding: 20px;
+}
+
+h2{
+    padding: 10px;
+}
+
+a{
+    padding: 10px;
+
+}
+
+a:link{
+    color: #BFD7EA;
+}
+a:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+
+main{
+
+    background-color: #BFD7EA;
+    height: 100%;
+}
+.shop{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+div{
+    display: block;
+}
+.browse{
+    display: inline;
+    padding: 10px;
+    background-color: #0B3954;
+    margin: 10px;
+    width: 300px;
+}
+
+#confirm{
+ padding: 20px;
+}
+.browse img{
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.thing{
+    font-size: 2em;
+    color: #BFD7EA;
+    text-align: center;
+}
+
+.itemImage{
+    width: 200px;
+}
+
+input[type=submit], #cartCheck {
+    background-color: #BFD7EA;
+    border: none;
+    color: #FF5A5F;
+    padding: 15px 32px;
+    width: 90%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.itemButton{
+    background-color: #0B3954;
+}
+#checkoutBtn, #cartCheck{
+
+    background-color: #0B3954;
+    margin: 20px;
+    width: 250px;
+}
+
+.cart{
+    display: block;
+
+}
+
+.cartItem{
+    display: inline;
+    padding-left: 200px;
+}

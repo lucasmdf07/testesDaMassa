@@ -1,0 +1,25 @@
+body{
+   margin:10%;
+}
+
+#FirstDiv{
+   background-color:yellow;
+}
+
+#SecondDiv {
+   background-color: green;
+}
+
+#ThirdDiv {
+   background-color: blue;
+}
+
+div:hover {
+   font-weight:bold;
+}
+
+$(document).ready(function(){
+   $("ColorBut").click(function(){
+   $(this).changeColor();
+   });
+   });
