@@ -1,14 +1,37 @@
 <html>
 <head>
-<title>Midwest Outdoors</title>
+<title>Rate My Hotel | List of Hotels</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 <div id="back">
 	<?php include 'navbar.php'; ?>
-	<h2>About Us</h2>
-	<p>This is a website for finding different outdoor locations around the midwest (Idaho, Wyoming, Montana) area. To start browsing, click on the "Browse" tab on the top.</p>
+
+	<h2>List of Hotels to Rate</h2>
+	<h3> Click on the Hotel Name for more Details</h3>
+	
+	<?php
+	include 'db_access.php';
+		
+	foreach ($db->query("SELECT * FROM state") as $state_row) {
+		echo $state_row["name"] . ", ";
+		$stateId = $state_row["id"];
+			
+		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $county_row) {
+			echo $county_row["name"];
+			echo "<ul>";
+			$countyId = $county_row["id"];
+				
+			foreach ($db->query("SELECT * FROM hotel WHERE city_id=$countyId") as $site_row) {
+				$siteId = $site_row["id"];
+				echo "<li><a href='site.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
+			}
+				
+			echo "</ul>";
+		}
+	}
+	?>
 </div>
 
 </body>
