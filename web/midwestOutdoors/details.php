@@ -2,7 +2,7 @@
 session_start();
 
 /* include credentials/pass to database */
-include 'db_access.php';
+include 'database/db_access.php';
 
 /*  */
 $siteId = $_GET["siteId"];
@@ -38,8 +38,8 @@ $selected = array ();
 // 
 
 ?>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>Rate My Hotel | Hotel Details</title>
 <link rel="stylesheet" href="css/css.css">
