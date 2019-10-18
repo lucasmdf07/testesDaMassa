@@ -36,7 +36,17 @@
 			}
 				
 			echo "</ul>";
-		}
+
+			$stmt = $db->prepare("SELECT url FROM picture WHERE hotel_id=:siteId");
+			$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
+			$stmt->execute();
+			$stmt->bindColumn(1, $url);
+			
+			while ($stmt->fetch()) {
+				echo "<img src='" . $url . "'>";
+			}
+		
+			}
 	}
 	?>
 </div>
