@@ -22,21 +22,15 @@
 	<?php
 	include 'database/db_access.php';
 		
-
+	foreach ($db->query("SELECT * FROM state") as $state_row) {
+		echo $state_row["name"] . ", ";
+		$stateId = $state_row["id"];
 			
 		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $county_row) {
 			echo $county_row["name"];
-
-	
-
 			echo "<ul>";
 			$countyId = $county_row["id"];
-
-			foreach ($db->query("SELECT * FROM state") as $state_row) {
-				echo $state_row["name"] . ", ";
-				$stateId = $state_row["id"];
-
-			
+				
 			foreach ($db->query("SELECT * FROM hotel WHERE city_id=$countyId") as $site_row) {
 				$siteId = $site_row["id"];
 				echo "<li><a href='details.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
