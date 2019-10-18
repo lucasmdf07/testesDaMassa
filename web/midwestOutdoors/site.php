@@ -1,9 +1,13 @@
 <?php
 session_start();
 
+/* include credentials/pass to database */
 include 'db_access.php';
+
+/*  */
 $siteId = $_GET["siteId"];
 
+/*  */
 if (!isset($siteId)) {
 	die("No site ID.");
 }
@@ -67,7 +71,11 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>" . $description . "</p>";
 	}
 	?>
+
+
+	<!-- ************************************************************************************** -->
 	
+
 	<h3>Add a Review</h3>
 	
 	<?php 
@@ -91,6 +99,9 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<p>A review has already been submitted. Thank you for your input!</p>";
 	}
 	?>
+
+
+	<!-- ************************************************************************************** -->
 	
 	<h3>Reviews</h3>
 	
