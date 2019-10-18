@@ -5,11 +5,18 @@
 </head>
 
 <body>
-<div id="back">
-	<?php include 'navbar.php'; ?>
+<!-- navbar -->
+	<div class="navbar">
+	<a class="active" id="home" href="index.php">HOME</a>
+	</div>
+	<div class="row"></div>
+<!-- /navbar -->
+
+	<div class="body">
+    <br>
 
 	<h2>List of Hotels to Rate</h2>
-	<h3> Click on the Hotel Name for more Details</h3>
+	<h4> Click on the Hotel Name for more Details</h4>
 	
 	<?php
 	include 'db_access.php';

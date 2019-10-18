@@ -1,3 +1,3 @@
-<ul class="nav">
-  <li class="nav"><a href="index.php" class="nav">Home</a></li>
-</ul>
+<div class="navbar">
+<a id="home" href="index.php">HOME</a>
+</div>
