@@ -1,7 +1,7 @@
 <html>
 <head>
 <title>Rate My Hotel | List of Hotels</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/css.css">
 </head>
 
 <body>
