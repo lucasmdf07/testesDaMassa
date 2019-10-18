@@ -26,7 +26,7 @@
 		echo $state_row["name"] . ", ";
 		$stateId = $state_row["id"];
 			
-		foreach ($db->query("SELECT * FROM state WHERE state_id=$stateId") as $county_row) {
+		foreach ($db->query("SELECT * FROM state" WHERE state_name=$stateId") as $county_row) {
 			echo $county_row["name"];
 			echo "<ul>";
 			$countyId = $county_row["id"];
