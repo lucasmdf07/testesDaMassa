@@ -5,13 +5,13 @@
 
 .navbar {
 	display: flex;
-	background-color: white;
+	background-color: aliceblue;
 	padding: 14px 20px;
 	list-style: none;
   }
   
   .navbar a {
-	color: aliceblue;
+	color: white;
 	color: #7d4627;
 	padding: 14px 20px;
 	text-decoration: none;
