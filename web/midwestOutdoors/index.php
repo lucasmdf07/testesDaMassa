@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>Rate My Hotel | List of Hotels</title>
 <link rel="stylesheet" href="css/css.css">
@@ -19,7 +20,7 @@
 	<h4> Click on the Hotel Name for more Details</h4>
 	
 	<?php
-	include 'db_access.php';
+	include 'database/db_access.php';
 		
 	foreach ($db->query("SELECT * FROM state") as $state_row) {
 		echo $state_row["name"] . ", ";
