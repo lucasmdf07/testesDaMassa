@@ -32,7 +32,7 @@
 				
 			foreach ($db->query("SELECT * FROM hotel WHERE city_id=$countyId") as $site_row) {
 				$siteId = $site_row["id"];
-				echo "<li><a href='site.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
+				echo "<li><a href='details.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
 			}
 				
 			echo "</ul>";

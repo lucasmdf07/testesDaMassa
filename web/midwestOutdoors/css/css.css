@@ -3,6 +3,40 @@ body {
 	text-align: center;
 }
 
+.navbar {
+	display: flex;
+	background-color: white;
+	padding: 14px 20px;
+	list-style: none;
+  }
+  
+  .navbar a {
+	color: white;
+	color: #7d4627;
+	padding: 14px 20px;
+	text-decoration: none;
+	text-align: center;
+  }
+  
+  
+  .navbar a:hover {
+	background-color: #ddd;
+	color: black;
+	padding: 14px 20px;
+  }
+  
+  .navbar .active {
+	background-color: rgb(228, 153, 212);
+	color: white
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+
+
 h1, h2, h3, h4, p, li a {
 	color: black;
 	font-family: "Verdana";

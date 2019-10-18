@@ -18,8 +18,8 @@ $selected = array ();
 // 	$_SESSION["reviews_submitted"] = $selected;
 // }
 
-$name = $_POST["name"];
-$description = $_POST["description"];
+// $name = $_POST["name"];
+// $description = $_POST["description"];
 // $rating = $_POST["rating"];
 
 // if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
@@ -42,13 +42,20 @@ $description = $_POST["description"];
 <html>
 <head>
 <title>Rate My Hotel | Hotel Details</title>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/css.css">
 </head>
 
 <body>
-<div id="back">
+<!-- navbar -->
+<div class="navbar">
+	<a class="active" id="home" href="index.php">HOME</a>
+	</div>
+	<div class="row"></div>
+<!-- /navbar -->
+
+	<div class="body">
+    <br>
 	<?php 
-	include 'navbar.php';
 	
 	$stmt = $db->prepare("SELECT url FROM picture WHERE hotel_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
