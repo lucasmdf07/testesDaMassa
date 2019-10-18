@@ -41,7 +41,7 @@ $description = $_POST["description"];
 
 <html>
 <head>
-<title>Midwest Outdoors</title>
+<title>Rate My Hotel | Hotel Details</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
