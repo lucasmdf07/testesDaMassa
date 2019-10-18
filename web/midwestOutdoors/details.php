@@ -76,8 +76,8 @@ $selected = array ();
 	while ($stmt->fetch()) {
 		echo "<h2>" . $name . "</h2>";
 		echo "<h3>Description</h3>";
-		echo "<p>Address: " . $address . "</p>";
 		echo "<p>" . $description . "</p>";
+		echo "<p>Address: " . $address . "</p>";
 	}
 	?>
 
