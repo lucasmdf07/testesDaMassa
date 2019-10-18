@@ -8,7 +8,8 @@
 <div id="back">
 	<?php include 'navbar.php'; ?>
 
-	<h2>Browse</h2>
+	<h2>List of Hotels to Rate</h2>
+	<h3> Click on the Hotel Name for more Details</h3>
 	
 	<?php
 	include 'db_access.php';
