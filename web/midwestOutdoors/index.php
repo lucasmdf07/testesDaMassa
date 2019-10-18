@@ -35,7 +35,7 @@
 				echo "<li><a href='details.php?siteId=$siteId'>" . $site_row["name"] . "</a></li>";
 			}
 				
-			echo "</ul>";
+			
 
 			$stmt = $db->prepare("SELECT url FROM picture WHERE hotel_id=:siteId");
 			$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
@@ -44,6 +44,7 @@
 			
 			while ($stmt->fetch()) {
 				echo "<img src='" . $url . "'>";
+				echo "</ul>";
 			}
 		
 			}
