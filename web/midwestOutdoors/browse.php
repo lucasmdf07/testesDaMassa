@@ -14,11 +14,12 @@
 	include 'db_access.php';
 		
 	foreach ($db->query("SELECT * FROM state") as $state_row) {
-		echo $state_row["name"] . ", ";
+		echo $state_row["name"];
 		$stateId = $state_row["id"];
 			
 		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $county_row) {
 			echo $county_row["name"];
+			echo ", ";
 			echo "<ul>";
 			$countyId = $county_row["id"];
 				
