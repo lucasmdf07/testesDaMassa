@@ -18,13 +18,13 @@
 		foreach ($db->query("SELECT * FROM city WHERE state_id=$stateId") as $county_row) {
 			echo $county_row["name"];
 			echo ", ";
-			echo "<ul>";
+	
 
 			foreach ($db->query("SELECT * FROM state") as $state_row) {
 				echo $state_row["name"];
 				$stateId = $state_row["id"];
 
-		
+				echo "<ul>";	
 			$countyId = $county_row["id"];
 				
 			foreach ($db->query("SELECT * FROM hotel WHERE city_id=$countyId") as $site_row) {
