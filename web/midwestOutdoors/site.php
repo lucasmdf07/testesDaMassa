@@ -14,27 +14,29 @@ if (!isset($siteId)) {
 
 $selected = array ();
 
-if (!isset($_SESSION["reviews_submitted"])) {
-	$_SESSION["reviews_submitted"] = $selected;
-}
+// if (!isset($_SESSION["reviews_submitted"])) {
+// 	$_SESSION["reviews_submitted"] = $selected;
+// }
 
 $name = $_POST["name"];
 $description = $_POST["description"];
-$rating = $_POST["rating"];
+// $rating = $_POST["rating"];
 
-if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
-	$stmt = $db->prepare(
-	"INSERT INTO rating (reviewer_name, description, rating, site_id) 
-	VALUES (:name, :description, :rating, :siteId)");
+// if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION["reviews_submitted"][$siteId])) {
+	// $stmt = $db->prepare(
+// 	"INSERT INTO rating (reviewer_name, description, rating, site_id) 
+// 	VALUES (:name, :description, :rating, :siteId)");
 	
-	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
-	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
-	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
-	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
-	$stmt->execute();
+// 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
+// 	$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+// 	$stmt->bindValue(':description', $description, PDO::PARAM_STR);
+// 	$stmt->bindValue(':rating', $rating, PDO::PARAM_STR);
+// 	$stmt->execute();
 	
-	$_SESSION["reviews_submitted"][$siteId] = true;
-}
+// 	$_SESSION["reviews_submitted"][$siteId] = true;
+// }
+// 
+
 ?>
 
 <html>
@@ -48,7 +50,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	<?php 
 	include 'navbar.php';
 	
-	$stmt = $db->prepare("SELECT url FROM picture WHERE site_id=:siteId");
+	$stmt = $db->prepare("SELECT url FROM picture WHERE hotel_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $url);
@@ -57,17 +59,17 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 		echo "<img src='" . $url . "'>";
 	}
 
-	$stmt = $db->prepare("SELECT name, location, description FROM site WHERE id=:siteId");
+	$stmt = $db->prepare("SELECT name, address, description FROM hotel WHERE id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
 	$stmt->execute();
 	$stmt->bindColumn(1, $name);
-	$stmt->bindColumn(2, $location);
+	$stmt->bindColumn(2, $address);
 	$stmt->bindColumn(3, $description);
 	
 	while ($stmt->fetch()) {
 		echo "<h2>" . $name . "</h2>";
 		echo "<h3>Description</h3>";
-		echo "<p>Location: " . $location . "</p>";
+		echo "<p>Address: " . $address . "</p>";
 		echo "<p>" . $description . "</p>";
 	}
 	?>
@@ -76,7 +78,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	<!-- ************************************************************************************** -->
 	
 
-	<h3>Add a Review</h3>
+	<!-- <h3>Add a Review</h3>
 	
 	<?php 
 	
@@ -98,13 +100,13 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 	else {
 		echo "<p>A review has already been submitted. Thank you for your input!</p>";
 	}
-	?>
+	?> -->
 
 
 	<!-- ************************************************************************************** -->
 	
 	<h3>Reviews</h3>
-	
+<!-- 	
 	<?php
 	
 	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE site_id=:siteId");
@@ -127,7 +129,7 @@ if (isset($name) and isset($description) and isset($rating) and !isset($_SESSION
 
 		echo "<br>" . $description . "</p>";
 	}
-	?>
+	?> -->
 </div>
 
 </body>
