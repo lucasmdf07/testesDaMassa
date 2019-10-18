@@ -44,7 +44,7 @@
 			$stmt->bindColumn(1, $url);
 			
 			while ($stmt->fetch()) {
-				echo "<li><img src='" . $url . "'></li>";
+				echo "<li class='images'><img src='" . $url . "'></li>";
 			}
 	
 			echo "</ul>";
