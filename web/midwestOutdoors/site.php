@@ -78,8 +78,9 @@ $description = $_POST["description"];
 	<!-- ************************************************************************************** -->
 	
 
-	<!-- <h3>Add a Review</h3>
-	
+	<!-- <h3>Add a Review</h3> -->
+
+	<!--	
 	<?php 
 	
 	if (!isset($_SESSION["reviews_submitted"][$siteId])) {
@@ -104,10 +105,11 @@ $description = $_POST["description"];
 
 
 	<!-- ************************************************************************************** -->
-	
+<!-- 		
 	<h3>Reviews</h3>
-<!-- 	
-	<?php
+-->
+
+<!--	<?php
 	
 	$stmt = $db->prepare("SELECT reviewer_name, rating, description FROM rating WHERE site_id=:siteId");
 	$stmt->bindValue(':siteId', $siteId, PDO::PARAM_STR);
